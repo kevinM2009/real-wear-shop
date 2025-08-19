@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NovaWear — Modern Apparel</title>
+	<meta name="description" content="NovaWear — A modern apparel brand. Shop premium everyday essentials.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a class="brand" href="#">
+				<img src="./assets/logo.svg" alt="NovaWear logo" class="logo">
+				<span class="brand-name">NovaWear</span>
+			</a>
+			<nav class="main-nav" aria-label="Primary">
+				<a href="#shop">Shop</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<div class="header-actions">
+				<label class="search">
+					<span class="sr-only">Search products</span>
+					<input id="searchInput" type="search" placeholder="Search products…" autocomplete="off">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+				</label>
+				<button class="cart-button" id="openCartBtn" aria-label="Open cart" aria-haspopup="dialog">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12zM6 6L5 3H2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					<span id="cartCount" class="badge" aria-live="polite">0</span>
+				</button>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero" aria-label="Brand hero">
+			<div class="container hero-inner">
+				<div class="hero-copy">
+					<h1>Elevate your everyday.</h1>
+					<p>Premium essentials crafted for comfort and style. Thoughtfully designed. Responsibly made.</p>
+					<a href="#shop" class="btn btn-primary">Shop the collection</a>
+				</div>
+				<div class="hero-media" aria-hidden="true"></div>
+			</div>
+		</section>
+
+		<section id="shop" class="shop container">
+			<header class="shop-header">
+				<h2>Featured products</h2>
+				<div class="filters">
+					<label>
+						<span class="label">Category</span>
+						<select id="categoryFilter">
+							<option value="all">All</option>
+						</select>
+					</label>
+					<label>
+						<span class="label">Price</span>
+						<input id="priceRange" type="range" min="0" max="200" value="200">
+						<span id="priceRangeValue" class="range-value"></span>
+					</label>
+					<button id="clearFiltersBtn" class="btn btn-ghost">Clear</button>
+				</div>
+			</header>
+			<div id="productsGrid" class="products-grid" aria-live="polite"></div>
+		</section>
+
+		<section id="about" class="container about">
+			<h2>About NovaWear</h2>
+			<p>We build versatile garments that move with you from day to night. Our materials are responsibly sourced and our manufacturing partners are carefully vetted to ensure an ethical supply chain.</p>
+		</section>
+
+		<section id="contact" class="container contact">
+			<h2>Contact</h2>
+			<p>Email us at <a href="mailto:support@novawear.example">support@novawear.example</a></p>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<p>© <span id="year"></span> NovaWear. All rights reserved.</p>
+			<nav class="footer-nav" aria-label="Footer">
+				<a href="#privacy">Privacy</a>
+				<a href="#terms">Terms</a>
+			</nav>
+		</div>
+	</footer>
+
+	<!-- Product quick view modal -->
+	<dialog id="productModal" class="modal">
+		<div class="modal-content" role="document">
+			<button class="icon-button modal-close" id="closeProductModal" aria-label="Close">
+				<span aria-hidden="true">×</span>
+			</button>
+			<div id="modalBody"></div>
+		</div>
+	</dialog>
+
+	<!-- Cart drawer -->
+	<aside id="cartDrawer" class="cart-drawer" aria-hidden="true" aria-label="Shopping cart" role="dialog">
+		<div class="cart-header">
+			<h3>Your cart</h3>
+			<button class="icon-button" id="closeCartBtn" aria-label="Close cart">×</button>
+		</div>
+		<div id="cartItems" class="cart-items"></div>
+		<div class="cart-footer">
+			<div class="totals">
+				<span>Subtotal</span>
+				<strong id="cartSubtotal">$0.00</strong>
+			</div>
+			<button id="checkoutBtn" class="btn btn-primary" disabled>Checkout</button>
+		</div>
+	</aside>
+	<div id="drawerBackdrop" class="backdrop" hidden></div>
+
+	<!-- Checkout modal -->
+	<dialog id="checkoutModal" class="modal">
+		<div class="modal-content" role="document">
+			<button class="icon-button modal-close" id="closeCheckoutModal" aria-label="Close">×</button>
+			<h3>Checkout</h3>
+			<form id="checkoutForm" class="form">
+				<div class="form-row">
+					<label>
+						<span class="label">Full name</span>
+						<input name="fullName" required placeholder="Jane Doe">
+					</label>
+					<label>
+						<span class="label">Email</span>
+						<input type="email" name="email" required placeholder="jane@example.com">
+					</label>
+				</div>
+				<label>
+					<span class="label">Address</span>
+					<input name="address" required placeholder="123 Main St">
+				</label>
+				<div class="form-row">
+					<label>
+						<span class="label">City</span>
+						<input name="city" required>
+					</label>
+					<label>
+						<span class="label">Postal code</span>
+						<input name="postal" required>
+					</label>
+				</div>
+				<button type="submit" class="btn btn-primary full">Place order</button>
+			</form>
+			<div id="orderConfirmation" class="hidden"></div>
+		</div>
+	</dialog>
+
+	<script src="./app.js" defer></script>
+</body>
+</html>
+

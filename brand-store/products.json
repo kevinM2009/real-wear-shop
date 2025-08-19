@@ -1,0 +1,113 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"title": "Aero Tee",
+			"description": "Featherweight tee with breathable knit.",
+			"price": 28,
+			"category": "tops",
+			"image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L","XL"], "colors": ["Black","White","Navy"]}
+		},
+		{
+			"id": 2,
+			"title": "Form Hoodie",
+			"description": "Structured fleece hoodie for everyday comfort.",
+			"price": 64,
+			"category": "tops",
+			"image": "https://images.unsplash.com/photo-1503342217505-b0a15cf70489?q=80&w=1633&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L","XL"], "colors": ["Navy","Grey","Black"]}
+		},
+		{
+			"id": 3,
+			"title": "Motion Jogger",
+			"description": "Tapered joggers with four-way stretch.",
+			"price": 59,
+			"category": "bottoms",
+			"image": "https://images.unsplash.com/photo-1548883354-7622d03aca23?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L","XL"], "colors": ["Charcoal","Black","Olive"]}
+		},
+		{
+			"id": 4,
+			"title": "Trail Shorts",
+			"description": "Ultralight shorts with mesh liner.",
+			"price": 34,
+			"category": "bottoms",
+			"image": "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L","XL"], "colors": ["Black","Olive","Rust"]}
+		},
+		{
+			"id": 5,
+			"title": "City Jacket",
+			"description": "Water-resistant shell with matte finish.",
+			"price": 129,
+			"category": "outerwear",
+			"image": "https://images.unsplash.com/photo-1551016877-4312234ab3c4?q=80&w=1706&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L","XL"], "colors": ["Black","Forest","Khaki"]}
+		},
+		{
+			"id": 6,
+			"title": "Core Cap",
+			"description": "Low-profile cap with adjustable strap.",
+			"price": 22,
+			"category": "accessories",
+			"image": "https://images.unsplash.com/photo-1548883354-2a093bc24447?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["OS"], "colors": ["Black","Beige","Navy"]}
+		},
+		{
+			"id": 7,
+			"title": "Everyday Socks (3-pack)",
+			"description": "Cushioned footbed and breathable mesh.",
+			"price": 18,
+			"category": "accessories",
+			"image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1632&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L"], "colors": ["White","Black"]}
+		},
+		{
+			"id": 8,
+			"title": "Balance Legging",
+			"description": "High-rise leggings with sculpt support.",
+			"price": 58,
+			"category": "bottoms",
+			"image": "https://images.unsplash.com/photo-1520975624749-1490fdf4dc36?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["XS","S","M","L"], "colors": ["Black","Plum","Sage"]}
+		},
+		{
+			"id": 9,
+			"title": "Aura Tank",
+			"description": "Ribbed tank in buttery-soft fabric.",
+			"price": 26,
+			"category": "tops",
+			"image": "https://images.unsplash.com/photo-1520975782030-6c7573c6bb51?q=80&w=1738&auto=format&fit=crop",
+			"options": {"sizes": ["XS","S","M","L"], "colors": ["Sand","Black","Mauve"]}
+		},
+		{
+			"id": 10,
+			"title": "Transit Duffel",
+			"description": "35L duffel with weatherproof zippers.",
+			"price": 89,
+			"category": "bags",
+			"image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["35L"], "colors": ["Black","Olive"]}
+		},
+		{
+			"id": 11,
+			"title": "Glide Sneakers",
+			"description": "Knit upper with responsive foam sole.",
+			"price": 98,
+			"category": "footwear",
+			"image": "https://images.unsplash.com/photo-1542293787938-c9e299b88054?q=80&w=1740&auto=format&fit=crop",
+			"options": {"sizes": ["7","8","9","10","11"], "colors": ["White","Black","Grey"]}
+		},
+		{
+			"id": 12,
+			"title": "Refine Belt",
+			"description": "Full-grain leather with matte buckle.",
+			"price": 32,
+			"category": "accessories",
+			"image": "https://images.unsplash.com/photo-1543168256-418811576931?q=80&w=1730&auto=format&fit=crop",
+			"options": {"sizes": ["S","M","L"], "colors": ["Brown","Black"]}
+		}
+	]
+}
+
