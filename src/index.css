@@ -160,7 +160,7 @@
   }
 
   .card-product {
-    @apply card-premium group cursor-pointer overflow-hidden;
+    @apply card-premium cursor-pointer overflow-hidden;
   }
 
   .card-product:hover {

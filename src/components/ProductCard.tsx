@@ -21,7 +21,7 @@ const ProductCard = ({ product, onAddToCart, onQuickView }: ProductCardProps) =>
 
   return (
     <div 
-      className="card-product p-0"
+      className="card-product group p-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
